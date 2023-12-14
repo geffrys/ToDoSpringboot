@@ -33,7 +33,7 @@ public class TodoController {
     }
 
 
-    @GetMapping("/")
+    @GetMapping
     public ResponseEntity<List<Task>> getTasks() {
         List<Task> tasks = taskService.getTasks();
         if(tasks.isEmpty()){
@@ -48,8 +48,8 @@ public class TodoController {
     }
     
 
-    @PostMapping("/")
-    public ResponseEntity<Task> postMethodName(@RequestBody Task task) {
+    @PostMapping
+    public ResponseEntity<Task> postTask(@RequestBody Task task) {
         return ResponseEntity.ok(taskService.saveTask(task));
     }
 
