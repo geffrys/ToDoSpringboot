@@ -13,6 +13,9 @@ steps:
 - script: 'cd ./todo'
   displayName: 'Change directory'
 
+- script: 'ls -la'
+  displayName: 'List of directory'
+
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
