@@ -27,7 +27,7 @@ public class SecurityConfig {
                     .anyRequest()
                     .authenticated()
             )
-            .csrf(csrf->csrf.disable())
+            .csrf(csrf->csrf.disable()) // para el acceso desde postman
             .build()
         ;
 	}

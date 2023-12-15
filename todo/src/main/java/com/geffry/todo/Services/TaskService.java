@@ -36,5 +36,10 @@ public class TaskService {
         }
         return Optional.empty();
     }
+
+    @Transactional
+    public void markTaskFinished(Integer id){
+        taskRepository.markTaskAsFinished(id);
+    }
     
 }

@@ -1,4 +1,4 @@
-package com.geffry.todo.Models;
+package com.geffry.todo.Database.Models;
 
 
 public enum Estado {
