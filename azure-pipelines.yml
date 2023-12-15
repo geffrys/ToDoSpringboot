@@ -10,7 +10,7 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: cd /todo
+- script: 'cd ./todo'
   displayName: 'Change directory'
 
 - task: Maven@3
