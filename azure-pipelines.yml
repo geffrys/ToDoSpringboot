@@ -10,15 +10,13 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: 'cd ./todo'
-  displayName: 'Change directory'
-
-- script: 'ls -la'
-  displayName: 'List of directory'
+- script: 'cd todo/ && ls -la '
+  displayName: 'Change directory and list items'
 
 - task: Maven@3
+  
   inputs:
-    mavenPomFile: 'pom.xml'
+    mavenPomFile: 'todo/pom.xml'
     mavenOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
