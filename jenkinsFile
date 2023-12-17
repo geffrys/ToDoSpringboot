@@ -1,0 +1,22 @@
+// Define the pipeline
+pipeline {
+    agent any
+    
+    stages {
+        stage('Test') {
+            steps {
+                dir("todo") {
+                    sh 'mvn test'
+                }
+            }
+        }
+        stage('Build') {
+            steps {
+                dir("todo"){
+                   sh 'mvn clean install'
+                   sh 'mvn clean package' 
+                }
+            }
+        }
+    }
+}

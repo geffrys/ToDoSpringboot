@@ -13,6 +13,14 @@ steps:
 - script: 'cd todo/ && ls -la '
   displayName: 'Change directory and list items'
 
+- task: DockerCompose@0
+  inputs:
+    containerregistrytype: 'Container Registry'
+    dockerRegistryEndpoint: 'yourDockerRegistryServiceConnection'
+    dockerComposeFile: 'docker-compose.yml'
+    action: 'Run a Docker Compose command'
+    dockerComposeCommand: 'up -d'
+
 - task: Maven@3
   
   inputs:
